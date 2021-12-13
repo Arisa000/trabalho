@@ -8,17 +8,17 @@ const ListItem = ({name, symbol, currentPrice, priceChangePercentage7d, logo}) =
             <View style={styles.itemWrapper}>
                 <View style={styles.leftWrapper}>
                     <Image 
-                        source = {{uri: "./assets/ETH.png"}}
+                        source = {{uri: logo}}
                         style={styles.image}
                     />
                     <View style={styles.titleWrapper}>
-                        <Text style={styles.title}>Ethereum</Text>
-                        <Text style={styles.subtitle}>ETH</Text>
+                        <Text style={styles.title}>{name}</Text>
+                        <Text style={styles.subtitle}>{symbol}</Text>
                     </View>
                 </View>
                 <View style={styles.rightWrapper}>
-                    <Text style={styles.title}>Ethereum</Text>
-                    <Text style={[styles.subtitle, {color: 'red'}]}>ETH</Text>
+                    <Text style={styles.title}>{currentPrice}</Text>
+                    <Text style={[styles.subtitle, {color: 'red'}]}>{priceChangePercentage7d}</Text>
                 </View>
             </View>
         </TouchableOpacity>
